@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NCPDP Translator - Result</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#111412;
+color:white;
+}
+
+nav{
+background:#1a1f1d;
+color:white;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:2px solid #4CAF50;
+}
+
+nav h2{
+font-size:24px;
+color:#4CAF50;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:40px auto;
+}
+
+.card{
+background:#1a1f1d;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+h1{
+text-align:center;
+color:#4CAF50;
+margin-bottom:30px;
+}
+
+.info{
+margin-bottom:15px;
+font-size:17px;
+color:white;
+}
+
+#status{
+font-weight:bold;
+margin-bottom:20px;
+color:#4CAF50;
+}
+
+#errorList{
+margin-bottom:20px;
+color:#ff5252;
+padding-left:20px;
+}
+
+pre{
+background:#111412;
+color:#4CAF50;
+padding:20px;
+border-radius:10px;
+overflow:auto;
+max-height:450px;
+font-size:14px;
+border:1px solid #4CAF50;
+}
+
+.buttons{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+button{
+padding:12px 22px;
+background:#4CAF50;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:15px;
+transition:.3s;
+}
+
+button:hover{
+background:#43a047;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>NCPDP Translator</h2>
+
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h1>EDI Translation Result</h1>
+
+<div class="info">
+
+<strong>Uploaded File:</strong>
+
+<span id="filename"></span>
+
+</div>
+
+<div class="info">
+
+<strong>Status:</strong>
+
+<span id="status"></span>
+
+</div>
+
+<ul id="errorList"></ul>
+
+<pre id="jsonOutput">
+
+Loading...
+
+</pre>
+
+<div class="buttons">
+
+<button id="downloadBtn">
+
+Download JSON
+
+</button>
+
+<button onclick="location.href='translator.html'">
+
+Upload Another
+
+</button>
+
+<button onclick="location.href='history.html'">
+
+History
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/result.js"></script>
+
+</body>
+
+</html>
